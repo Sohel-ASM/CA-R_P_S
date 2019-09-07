@@ -20,3 +20,18 @@ const getComputerChoice = () => {
             break;
     }
 }
+const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice) {
+        return 'Game Tie';
+    }
+    if (userChoice === 'bomb') { // cheat code
+        return 'You won';
+    } else if (userChoice === 'rock') {
+        return (computerChoice === 'paper') ? 'Computer won' : 'You won';
+    } else if (userChoice === 'paper') {
+        return (computerChoice === 'scissors') ? 'Computer won' : 'You won';
+    } else if (userChoice === 'scissors') {
+        return (computerChoice === 'rock') ? 'Computer won' : 'You won';
+    }
+
+}
