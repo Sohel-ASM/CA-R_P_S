@@ -35,3 +35,13 @@ const determineWinner = (userChoice, computerChoice) => {
     }
 
 }
+const playGame = (user) => {
+    let userChoice = getUserChoice(user);
+    let computerChoice = getComputerChoice();
+    console.log('Your pick: ' + userChoice);
+    console.log('Computer\'s pick: ' + computerChoice);
+    let winner = determineWinner(userChoice, computerChoice);
+    console.log(winner);
+}
+
+playGame('Bomb');
